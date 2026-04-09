@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Container ── */
+.otp-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 16px;
+}
+
+/* ── Card ── */
+.otp-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 60px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Heading ── */
+.otp-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #111b21;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+.otp-subtitle {
+  font-size: 14px;
+  color: #667781;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.otp-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111b21;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/* ── 4-digit boxes ── */
+.otp-boxes {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.otp-box {
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid #d1d7db;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111b21;
+  text-align: center;
+  outline: none;
+  background: #fff;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  caret-color: #25d366;
+}
+
+.otp-box:focus {
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12);
+}
+
+/* ── Resend ── */
+.otp-resend {
+  font-size: 14px;
+  color: #008069;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  margin-bottom: 28px;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.otp-resend:hover {
+  color: #25d366;
+}
+
+.otp-resend:disabled {
+  color: #aebac1;
+  cursor: not-allowed;
+}
+
+/* ── Verify button ── */
+.otp-button {
+  width: 100%;
+  padding: 14px;
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  font-family: inherit;
+  transition: background 0.18s ease, transform 0.1s ease, box-shadow 0.18s ease;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.otp-button:hover {
+  background: #20bc5a;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+
+.otp-button:active {
+  transform: scale(0.99);
+  background: #1aab50;
+}
+
+/* ── Responsive: tablet ── */
+@media (max-width: 600px) {
+  .otp-card {
+    padding: 48px 28px 36px;
+    border-radius: 12px;
+  }
+
+  .otp-title {
+    font-size: 24px;
+  }
+
+  .otp-box {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 400px) {
+  .otp-card {
+    padding: 40px 20px 32px;
+  }
+
+  .otp-title {
+    font-size: 21px;
+  }
+
+  .otp-subtitle {
+    font-size: 13px;
+  }
+
+  .otp-box {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+    border-radius: 8px;
+    gap: 8px;
+  }
+
+  .otp-boxes {
+    gap: 8px;
+  }
+
+  .otp-button {
+    font-size: 14px;
+    padding: 13px;
+  }
+}
